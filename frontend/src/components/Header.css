@@ -1,0 +1,740 @@
+
+/* =========================================================
+   CIVIC CONNECT
+   PREMIUM DASHBOARD HEADER
+========================================================= */
+
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid #e9eaf2;
+
+  box-shadow: 0 4px 18px rgba(23, 21, 59, 0.04);
+
+  backdrop-filter: blur(10px);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT SECTION
+========================================================= */
+
+.dashboard-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   MENU BUTTON
+========================================================= */
+
+.dashboard-menu-btn {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #e5e6ef;
+  border-radius: 11px;
+
+  background: #ffffff;
+  color: #45475e;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dashboard-menu-btn:hover {
+  background: #635bff;
+  border-color: #635bff;
+  color: #ffffff;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 14px rgba(99, 91, 255, 0.22);
+}
+
+.dashboard-menu-btn:active {
+  transform: scale(0.96);
+}
+
+
+/* =========================================================
+   HEADER TITLE
+========================================================= */
+
+.dashboard-header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-width: 0;
+}
+
+.dashboard-header-eyebrow {
+  margin: 0 0 4px;
+
+  color: #635bff;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+  line-height: 1;
+}
+
+.dashboard-header-title h2 {
+  margin: 0;
+
+  color: #17153b;
+
+  font-size: 20px;
+  font-weight: 750;
+
+  letter-spacing: -0.3px;
+  line-height: 1.15;
+}
+
+
+/* =========================================================
+   RIGHT SECTION
+========================================================= */
+
+.dashboard-header-right {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+
+/* =========================================================
+   NOTIFICATION BUTTON
+========================================================= */
+
+.dashboard-notification-btn {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #e5e6ef;
+  border-radius: 11px;
+
+  background: #ffffff;
+  color: #5d6076;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.dashboard-notification-btn:hover {
+  background: #f2f1ff;
+  border-color: #dcd9ff;
+  color: #635bff;
+
+  transform: translateY(-1px);
+}
+
+.dashboard-notification-btn:active {
+  transform: scale(0.96);
+}
+
+
+/* =========================================================
+   NOTIFICATION DOT
+========================================================= */
+
+.notification-dot {
+  position: absolute;
+
+  top: 8px;
+  right: 8px;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #ef5b6b;
+
+  border: 2px solid #ffffff;
+
+  box-sizing: content-box;
+}
+
+
+/* =========================================================
+   USER WRAPPER
+========================================================= */
+
+.dashboard-user-wrapper {
+  position: relative;
+}
+
+
+/* =========================================================
+   USER BUTTON
+========================================================= */
+
+.dashboard-user-btn {
+  min-width: 205px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 5px 9px 5px 5px;
+
+  border: 1px solid transparent;
+  border-radius: 13px;
+
+  background: transparent;
+  color: #20213a;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dashboard-user-btn:hover {
+  background: #f8f8fc;
+  border-color: #e8e8f0;
+
+  box-shadow: 0 3px 12px rgba(23, 21, 59, 0.04);
+}
+
+
+/* =========================================================
+   USER AVATAR
+========================================================= */
+
+.dashboard-user-avatar {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #635bff,
+      #8b5cf6
+    );
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  box-shadow:
+    0 5px 12px rgba(99, 91, 255, 0.2);
+}
+
+.dashboard-user-avatar.large {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 11px;
+}
+
+
+/* =========================================================
+   USER INFO
+========================================================= */
+
+.dashboard-user-info {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-user-info strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #20213a;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  line-height: 1.3;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-user-info span {
+  display: block;
+
+  margin-top: 2px;
+
+  overflow: hidden;
+
+  color: #73758c;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CHEVRON
+========================================================= */
+
+.dashboard-user-btn > svg {
+  flex-shrink: 0;
+
+  color: #8a8ca0;
+
+  transition:
+    transform 0.25s ease,
+    color 0.2s ease;
+}
+
+.dashboard-user-btn:hover > svg {
+  color: #635bff;
+}
+
+.dashboard-user-btn > .chevron-open {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.dashboard-user-dropdown {
+  position: absolute;
+
+  top: calc(100% + 10px);
+  right: 0;
+
+  width: 285px;
+
+  padding: 8px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e6ef;
+  border-radius: 15px;
+
+  box-shadow:
+    0 18px 45px rgba(23, 21, 59, 0.14),
+    0 3px 10px rgba(23, 21, 59, 0.05);
+
+  animation: headerDropdown 0.18s ease;
+
+  box-sizing: border-box;
+}
+
+@keyframes headerDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-7px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   DROPDOWN USER INFO
+========================================================= */
+
+.dropdown-user-header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 10px 9px 13px;
+}
+
+.dropdown-user-header > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-user-header strong {
+  overflow: hidden;
+
+  color: #20213a;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  line-height: 1.3;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown-user-header span {
+  margin-top: 3px;
+
+  overflow: hidden;
+
+  color: #73758c;
+
+  font-size: 11px;
+
+  line-height: 1.3;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.dropdown-divider {
+  height: 1px;
+
+  margin: 0 5px 7px;
+
+  background: #eeeeF3;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.dropdown-logout {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 11px 10px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+  color: #ef5b6b;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.dropdown-logout:hover {
+  background: #fff0f2;
+  color: #d94d60;
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+========================================================= */
+
+.dashboard-menu-btn:focus-visible,
+.dashboard-notification-btn:focus-visible,
+.dashboard-user-btn:focus-visible,
+.dropdown-logout:focus-visible {
+  outline: 3px solid rgba(99, 91, 255, 0.2);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .dashboard-header {
+    padding: 0 22px;
+  }
+
+  .dashboard-user-btn {
+    min-width: 175px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL SCREEN
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .dashboard-header {
+    height: 72px;
+    padding: 0 18px;
+  }
+
+  .dashboard-header-left {
+    gap: 12px;
+  }
+
+  .dashboard-user-info {
+    display: none;
+  }
+
+  .dashboard-user-btn {
+    min-width: auto;
+    padding: 4px;
+    gap: 5px;
+  }
+
+  .dashboard-user-btn > svg {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .dashboard-header {
+    height: 68px;
+    padding: 0 14px;
+  }
+
+  .dashboard-header-left {
+    gap: 10px;
+  }
+
+  .dashboard-menu-btn,
+  .dashboard-notification-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .dashboard-header-eyebrow {
+    margin-bottom: 3px;
+
+    font-size: 8px;
+    letter-spacing: 1.4px;
+  }
+
+  .dashboard-header-title h2 {
+    font-size: 17px;
+  }
+
+  .dashboard-header-right {
+    gap: 7px;
+  }
+
+  .dashboard-user-avatar {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 9px;
+  }
+
+  .notification-dot {
+    top: 6px;
+    right: 6px;
+  }
+
+  .dashboard-user-dropdown {
+    right: -3px;
+    width: 255px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .dashboard-header {
+    padding: 0 10px;
+  }
+
+  .dashboard-notification-btn {
+    display: none;
+  }
+
+  .dashboard-header-title h2 {
+    font-size: 16px;
+  }
+
+  .dashboard-header-eyebrow {
+    font-size: 7px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 340px) {
+
+  .dashboard-menu-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .dashboard-user-avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .dashboard-header-title h2 {
+    font-size: 14px;
+  }
+
+}
+
+
+/* ================================
+   HEADER MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .admin-header {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .admin-header h1,
+  .admin-header h2 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .admin-header p {
+    font-size: 13px;
+  }
+
+  .admin-header button {
+    max-width: 100%;
+  }
+
+  .admin-header input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .admin-header {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .admin-header h1,
+  .admin-header h2 {
+    font-size: 16px;
+  }
+
+  .admin-header p {
+    font-size: 12px;
+  }
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+}
+

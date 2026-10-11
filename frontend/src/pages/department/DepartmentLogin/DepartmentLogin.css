@@ -1,0 +1,292 @@
+/* =========================================================
+   CIVIC CONNECT
+   DEPARTMENT OFFICER LOGIN
+========================================================= */
+
+.department-login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(99, 91, 255, 0.18),
+      transparent 35%
+    ),
+    #f6f7fb;
+
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.department-login-card {
+  width: 100%;
+  max-width: 440px;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  padding: 42px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 20px 60px rgba(23, 21, 59, 0.12);
+}
+
+/* ICON */
+
+.department-login-icon {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 18px;
+
+  background: #17153b;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 10px 25px rgba(23, 21, 59, 0.2);
+}
+
+/* HEADING */
+
+.department-login-heading {
+  text-align: center;
+}
+
+.department-login-heading h1 {
+  margin: 0;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  color: #17153b;
+
+  letter-spacing: 1px;
+}
+
+.department-login-heading p {
+  margin: 7px 0 0;
+
+  font-size: 14px;
+
+  color: #73758c;
+}
+
+/* WELCOME */
+
+.department-login-welcome {
+  margin-top: 34px;
+  margin-bottom: 25px;
+}
+
+.department-login-welcome h2 {
+  margin: 0 0 7px;
+
+  font-size: 22px;
+
+  color: #20213a;
+}
+
+.department-login-welcome p {
+  margin: 0;
+
+  color: #73758c;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* ERROR */
+
+.department-login-error {
+  padding: 12px 14px;
+
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+
+  background: #fff0f2;
+
+  border: 1px solid #ffd2d8;
+
+  color: #c83f50;
+
+  font-size: 13px;
+}
+
+/* FORM */
+
+.department-form-group {
+  margin-bottom: 20px;
+}
+
+.department-form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #20213a;
+}
+
+/* INPUT */
+
+.department-input-wrapper {
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 14px;
+
+  border: 1px solid #e0e1eb;
+
+  border-radius: 11px;
+
+  background: #fafbfe;
+
+  transition: 0.2s ease;
+
+  box-sizing: border-box;
+}
+
+.department-input-wrapper:focus-within {
+  border-color: #635bff;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 91, 255, 0.1);
+
+  background: #ffffff;
+}
+
+.department-input-wrapper svg {
+  color: #73758c;
+
+  flex-shrink: 0;
+}
+
+.department-input-wrapper input {
+  flex: 1;
+
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #20213a;
+
+  font-size: 14px;
+}
+
+.department-input-wrapper input::placeholder {
+  color: #a0a2b1;
+}
+
+/* PASSWORD TOGGLE */
+
+.password-toggle {
+  border: none;
+
+  background: transparent;
+
+  padding: 4px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  color: #73758c;
+}
+
+.password-toggle:hover {
+  color: #635bff;
+}
+
+/* LOGIN BUTTON */
+
+.department-login-button {
+  width: 100%;
+
+  height: 52px;
+
+  margin-top: 5px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: #635bff;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.department-login-button:hover {
+  background: #554ee5;
+
+  transform: translateY(-1px);
+}
+
+.department-login-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* FOOTER */
+
+.department-login-footer {
+  margin-top: 25px;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  color: #8b8d9e;
+}
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+  .department-login-page {
+    padding: 18px;
+  }
+
+  .department-login-card {
+    padding: 30px 22px;
+
+    border-radius: 18px;
+  }
+}

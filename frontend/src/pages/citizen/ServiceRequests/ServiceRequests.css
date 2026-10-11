@@ -1,0 +1,1039 @@
+/* =========================================================
+   CIVIC CONNECT
+   SERVICE REQUEST / APPLICATION PAGE
+========================================================= */
+
+.service-request-page {
+  width: 100%;
+  min-height: calc(100vh - 76px);
+  padding: 34px 38px 60px;
+  background: #f6f7fb;
+  color: #20213a;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.service-request-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.service-header-icon {
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #635bff,
+    #8b5cf6
+  );
+  color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(99, 91, 255, 0.22);
+}
+
+.service-header-content {
+  min-width: 0;
+}
+
+.service-eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  color: #635bff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.service-request-header h1 {
+  margin: 0;
+  color: #17153b;
+  font-size: 29px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.service-request-header p {
+  margin: 7px 0 0;
+  color: #73758c;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   SUCCESS MESSAGE
+========================================================= */
+
+.service-success-message {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 16px 18px;
+  margin-bottom: 22px;
+  box-sizing: border-box;
+
+  background: #ecfbf5;
+  border: 1px solid #b9ead7;
+  border-radius: 14px;
+  color: #147d5d;
+
+  animation: serviceSuccessIn 0.35s ease;
+}
+
+.service-success-message svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.service-success-message strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.service-success-message p {
+  margin: 0;
+  font-size: 13px;
+  color: #4f8b78;
+}
+
+@keyframes serviceSuccessIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.service-request-card {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e9eaf2;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(23, 21, 59, 0.07);
+  overflow: hidden;
+}
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.service-form-section {
+  padding: 28px 30px;
+  border-bottom: 1px solid #ececf3;
+}
+
+.service-form-section:last-of-type {
+  border-bottom: none;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.service-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-bottom: 23px;
+}
+
+.section-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f0efff;
+  color: #635bff;
+  border-radius: 11px;
+}
+
+.service-section-heading h2 {
+  margin: 1px 0 4px;
+  color: #20213a;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.service-section-heading p {
+  margin: 0;
+  color: #85869a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.service-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.service-form-group {
+  width: 100%;
+}
+
+.service-form-group.full-width {
+  margin-top: 21px;
+}
+
+.service-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #292a43;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.service-form-group label span {
+  margin-left: 3px;
+  color: #ef5b6b;
+}
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+========================================================= */
+
+.service-form-group input,
+.service-form-group select,
+.service-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid #dedfea;
+  background: #fbfbfd;
+  color: #20213a;
+
+  border-radius: 11px;
+  outline: none;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.service-form-group input,
+.service-form-group select {
+  height: 47px;
+  padding: 0 14px;
+}
+
+.service-form-group textarea {
+  min-height: 135px;
+  padding: 13px 14px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.service-form-group input::placeholder,
+.service-form-group textarea::placeholder {
+  color: #a3a4b3;
+}
+
+.service-form-group input:hover,
+.service-form-group select:hover,
+.service-form-group textarea:hover {
+  border-color: #c8c6df;
+}
+
+.service-form-group input:focus,
+.service-form-group select:focus,
+.service-form-group textarea:focus {
+  background: #ffffff;
+  border-color: #635bff;
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.09);
+}
+
+.service-form-group small {
+  display: block;
+  margin-top: 7px;
+  color: #9091a2;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.service-form-group select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+/* =========================================================
+   SELECTED SERVICE BOX
+========================================================= */
+
+.selected-service-price {
+  width: 100%;
+  min-height: 88px;
+  margin-top: 22px;
+  padding: 17px 18px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: auto minmax(180px, 1fr) minmax(210px, auto) auto;
+  align-items: center;
+  gap: 17px;
+
+  background: linear-gradient(
+    135deg,
+    #f8f7ff,
+    #faf9ff
+  );
+
+  border: 1px solid #dfdcff;
+  border-radius: 15px;
+}
+
+/* =========================================================
+   SERVICE ICON
+========================================================= */
+
+.selected-service-price-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #635bff;
+  color: #ffffff;
+  border-radius: 13px;
+
+  box-shadow: 0 7px 16px rgba(99, 91, 255, 0.2);
+}
+
+/* =========================================================
+   SERVICE INFO
+========================================================= */
+
+.selected-service-info {
+  min-width: 0;
+}
+
+.selected-service-info > span {
+  display: block;
+  margin-bottom: 4px;
+  color: #85869a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.selected-service-info > strong {
+  display: block;
+  color: #252642;
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.selected-service-info small {
+  display: block;
+  margin-top: 4px;
+  color: #77798e;
+  font-size: 11px;
+}
+
+.selected-service-info small b {
+  color: #635bff;
+  font-weight: 700;
+}
+
+/* =========================================================
+   DEPARTMENT BOX
+========================================================= */
+
+.selected-service-department {
+  min-width: 210px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 13px;
+
+  background: #ffffff;
+  border: 1px solid #e6e4f5;
+  border-radius: 11px;
+}
+
+.selected-service-department > svg {
+  flex-shrink: 0;
+  color: #8b5cf6;
+}
+
+.selected-service-department span {
+  display: block;
+  margin-bottom: 3px;
+  color: #9697a8;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.selected-service-department strong {
+  display: block;
+  color: #3b3b57;
+  font-size: 11px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.service-fixed-price {
+  min-width: 120px;
+  text-align: right;
+  padding-left: 15px;
+  border-left: 1px solid #e5e3f1;
+}
+
+.service-fixed-price span {
+  display: block;
+  margin-bottom: 4px;
+  color: #8d8e9f;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.service-fixed-price strong {
+  display: block;
+  color: #20a77c;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.location-input-wrapper {
+  width: 100%;
+  height: 47px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 14px;
+
+  background: #fbfbfd;
+  border: 1px solid #dedfea;
+  border-radius: 11px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.location-input-wrapper svg {
+  flex-shrink: 0;
+  color: #635bff;
+}
+
+.location-input-wrapper:focus-within {
+  background: #ffffff;
+  border-color: #635bff;
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.09);
+}
+
+.location-input-wrapper input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #20213a;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+/* =========================================================
+   PRIORITY OPTIONS
+========================================================= */
+
+.priority-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.priority-option {
+  min-height: 72px;
+  padding: 13px 15px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border: 1px solid #e0e1e9;
+  border-radius: 12px;
+
+  background: #ffffff;
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.priority-option:hover {
+  transform: translateY(-2px);
+  border-color: #c9c7e6;
+  box-shadow: 0 7px 18px rgba(32, 33, 58, 0.06);
+}
+
+.priority-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.priority-option > div {
+  min-width: 0;
+}
+
+.priority-option strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #303149;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.priority-option span {
+  display: block;
+  color: #9293a3;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* ACTIVE PRIORITY */
+
+.priority-option.active {
+  transform: translateY(-1px);
+}
+
+.priority-option.active.low {
+  background: #f1fbf7;
+  border-color: #9ddfc8;
+  box-shadow: 0 6px 16px rgba(32, 180, 134, 0.08);
+}
+
+.priority-option.active.low strong {
+  color: #168565;
+}
+
+.priority-option.active.medium {
+  background: #fff9ec;
+  border-color: #f0d08d;
+  box-shadow: 0 6px 16px rgba(245, 166, 35, 0.08);
+}
+
+.priority-option.active.medium strong {
+  color: #b97808;
+}
+
+.priority-option.active.high {
+  background: #fff2f3;
+  border-color: #f2b2b9;
+  box-shadow: 0 6px 16px rgba(239, 91, 107, 0.08);
+}
+
+.priority-option.active.high strong {
+  color: #d44758;
+}
+
+/* =========================================================
+   UPLOAD BOX
+========================================================= */
+
+.upload-box {
+  position: relative;
+  width: 100%;
+  min-height: 145px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 22px;
+
+  background: #fbfbfd;
+  border: 1.5px dashed #cfd0df;
+  border-radius: 15px;
+
+  color: #77798e;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.upload-box:hover {
+  background: #f8f7ff;
+  border-color: #8b5cf6;
+  transform: translateY(-1px);
+}
+
+.upload-box input[type="file"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-box > svg {
+  margin-bottom: 9px;
+  color: #635bff;
+}
+
+.upload-box strong {
+  color: #393a54;
+  font-size: 13px;
+  font-weight: 750;
+  text-align: center;
+  word-break: break-word;
+}
+
+.upload-box span {
+  margin-top: 5px;
+  color: #9697a8;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* =========================================================
+   APPLICATION SUMMARY
+========================================================= */
+
+.service-application-summary {
+  margin: 0 30px 28px;
+  padding: 19px 20px;
+
+  background: #f8f9fc;
+  border: 1px solid #e5e6ef;
+  border-radius: 15px;
+}
+
+.summary-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 17px;
+
+  color: #303149;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.summary-heading svg {
+  color: #635bff;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.summary-grid > div {
+  min-width: 0;
+}
+
+.summary-grid span {
+  display: block;
+  margin-bottom: 5px;
+  color: #9091a2;
+  font-size: 10px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.summary-grid strong {
+  display: block;
+  color: #34354f;
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.service-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+
+  padding: 20px 30px;
+
+  background: #fafafd;
+  border-top: 1px solid #ececf3;
+}
+
+.service-cancel-btn,
+.service-submit-btn {
+  min-height: 45px;
+  border-radius: 10px;
+  padding: 0 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 750;
+
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+/* CANCEL */
+
+.service-cancel-btn {
+  background: #ffffff;
+  color: #55566d;
+  border: 1px solid #dedfea;
+}
+
+.service-cancel-btn:hover {
+  background: #f4f4f8;
+  border-color: #cfd0dd;
+}
+
+/* SUBMIT */
+
+.service-submit-btn {
+  border: none;
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #635bff,
+    #7c5ce8
+  );
+
+  box-shadow: 0 8px 18px rgba(99, 91, 255, 0.2);
+}
+
+.service-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 11px 23px rgba(99, 91, 255, 0.28);
+}
+
+.service-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.service-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .service-request-page {
+    padding: 28px 24px 50px;
+  }
+
+  .selected-service-price {
+    grid-template-columns:
+      auto
+      minmax(0, 1fr)
+      auto;
+  }
+
+  .selected-service-department {
+    grid-column: 2 / 3;
+    min-width: 0;
+  }
+
+  .service-fixed-price {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .service-request-page {
+    padding: 22px 15px 40px;
+  }
+
+  .service-request-header {
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 20px;
+  }
+
+  .service-header-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+  }
+
+  .service-header-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .service-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.1px;
+  }
+
+  .service-request-header h1 {
+    font-size: 23px;
+  }
+
+  .service-request-header p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .service-request-card {
+    border-radius: 17px;
+  }
+
+  .service-form-section {
+    padding: 22px 18px;
+  }
+
+  .service-section-heading {
+    gap: 10px;
+    margin-bottom: 19px;
+  }
+
+  .section-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .service-section-heading h2 {
+    font-size: 15px;
+  }
+
+  .service-section-heading p {
+    font-size: 11px;
+  }
+
+  .service-form-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  /* SERVICE DETAILS */
+
+  .selected-service-price {
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .selected-service-price-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .selected-service-info > strong {
+    font-size: 13px;
+  }
+
+  .selected-service-department {
+    grid-column: 1 / -1;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .service-fixed-price {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    text-align: left;
+    padding: 12px 0 0;
+    border-left: none;
+    border-top: 1px solid #e5e3f1;
+  }
+
+  .service-fixed-price strong {
+    font-size: 17px;
+  }
+
+  /* PRIORITY */
+
+  .priority-options {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .priority-option {
+    min-height: 63px;
+  }
+
+  /* SUMMARY */
+
+  .service-application-summary {
+    margin: 0 18px 22px;
+    padding: 16px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 12px;
+  }
+
+  /* ACTIONS */
+
+  .service-form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    padding: 17px 18px;
+  }
+
+  .service-cancel-btn,
+  .service-submit-btn {
+    width: 100%;
+  }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .service-request-page {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .service-request-header {
+    gap: 10px;
+  }
+
+  .service-header-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .service-request-header h1 {
+    font-size: 20px;
+  }
+
+  .service-request-header p {
+    font-size: 11px;
+  }
+
+  .service-form-section {
+    padding: 20px 14px;
+  }
+
+  .service-form-group input,
+  .service-form-group select {
+    height: 44px;
+  }
+
+  .service-form-group textarea {
+    min-height: 120px;
+  }
+
+  .selected-service-price {
+    padding: 13px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-application-summary {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  .service-form-actions {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+}

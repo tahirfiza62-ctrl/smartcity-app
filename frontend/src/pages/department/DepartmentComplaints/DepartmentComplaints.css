@@ -1,0 +1,865 @@
+
+/* =========================================================
+   DEPARTMENT COMPLAINTS PAGE
+   CIVIC CONNECT
+========================================================= */
+
+.department-complaints-page {
+  width: 100%;
+  min-height: calc(100vh - 76px);
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 20px;
+  background: #f6f7fb;
+  color: #20213a;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.department-complaints-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.department-complaints-eyebrow {
+  margin: 0 0 7px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #635bff;
+}
+
+.department-complaints-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 750;
+  color: #17153b;
+}
+
+.department-complaints-header > div > p:last-child {
+  margin: 8px 0 0;
+  color: #73758c;
+  font-size: 14px;
+}
+
+.department-complaints-header strong {
+  color: #635bff;
+}
+
+
+/* =========================================================
+   REFRESH BUTTON
+========================================================= */
+
+.department-refresh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 42px;
+  padding: 0 17px;
+
+  border: 1px solid #e1e3ed;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #20213a;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.department-refresh-btn:hover {
+  background: #635bff;
+  color: #ffffff;
+  border-color: #635bff;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.department-complaint-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.department-complaint-stat-card {
+  min-height: 92px;
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background: #ffffff;
+  border: 1px solid #e8e9f1;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 15px rgba(23, 21, 59, 0.04);
+
+  box-sizing: border-box;
+}
+
+.department-stat-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eeedff;
+  color: #635bff;
+}
+
+.department-stat-icon.submitted-stat {
+  background: #fff4df;
+  color: #f5a623;
+}
+
+.department-stat-icon.progress-stat {
+  background: #e7faff;
+  color: #06b6d4;
+}
+
+.department-stat-icon.resolved-stat {
+  background: #e6f8f1;
+  color: #20b486;
+}
+
+.department-complaint-stat-card span {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #73758c;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.department-complaint-stat-card strong {
+  display: block;
+
+  color: #17153b;
+  font-size: 25px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   FILTER CARD
+========================================================= */
+
+.department-filter-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 17px;
+
+  margin-bottom: 18px;
+
+  background: #ffffff;
+  border: 1px solid #e8e9f1;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 15px rgba(23, 21, 59, 0.04);
+}
+
+.department-search-box {
+  flex: 1;
+
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 13px;
+
+  border: 1px solid #e0e2eb;
+  border-radius: 10px;
+
+  background: #fafbfe;
+  color: #73758c;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.department-search-box:focus-within {
+  border-color: #635bff;
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.1);
+}
+
+.department-search-box input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #20213a;
+  font-size: 14px;
+}
+
+.department-search-box input::placeholder {
+  color: #9a9caf;
+}
+
+.department-filter-card select {
+  width: 190px;
+  height: 44px;
+
+  padding: 0 12px;
+
+  border: 1px solid #e0e2eb;
+  border-radius: 10px;
+
+  background: #fafbfe;
+  color: #20213a;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  outline: none;
+  cursor: pointer;
+}
+
+.department-filter-card select:focus {
+  border-color: #635bff;
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.1);
+}
+
+
+/* =========================================================
+   RESULT COUNT
+========================================================= */
+
+.department-result-count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0 0 13px;
+
+  color: #73758c;
+  font-size: 13px;
+}
+
+.department-result-count svg {
+  color: #635bff;
+}
+
+.department-result-count strong {
+  color: #20213a;
+}
+
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.department-table-card {
+  width: 100%;
+
+  background: #ffffff;
+  border: 1px solid #e8e9f1;
+  border-radius: 14px;
+
+  box-shadow: 0 5px 18px rgba(23, 21, 59, 0.05);
+
+  overflow: hidden;
+}
+
+.department-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.department-complaints-table {
+  width: 100%;
+  min-width: 1100px;
+
+  border-collapse: collapse;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.department-complaints-table thead {
+  background: #fafaff;
+}
+
+.department-complaints-table th {
+  padding: 15px 16px;
+
+  border-bottom: 1px solid #e8e9f1;
+
+  color: #73758c;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+
+  text-align: left;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.department-complaints-table td {
+  padding: 17px 16px;
+
+  border-bottom: 1px solid #f0f1f5;
+
+  vertical-align: middle;
+
+  font-size: 13px;
+}
+
+.department-complaints-table tbody tr {
+  transition: background 0.18s ease;
+}
+
+.department-complaints-table tbody tr:hover {
+  background: #fafaff;
+}
+
+.department-complaints-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   COMPLAINT
+========================================================= */
+
+.department-complaint-id {
+  margin-bottom: 4px;
+
+  color: #635bff;
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.department-complaint-subject {
+  max-width: 210px;
+
+  color: #20213a;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   CITIZEN
+========================================================= */
+
+.department-citizen-name {
+  margin-bottom: 4px;
+
+  color: #20213a;
+
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.department-citizen-email {
+  color: #8a8ca0;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.department-category {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 9px;
+
+  border-radius: 7px;
+
+  background: #f0efff;
+  color: #635bff;
+
+  font-size: 11px;
+  font-weight: 650;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.department-location {
+  display: block;
+
+  max-width: 170px;
+
+  color: #50526a;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   PRIORITY
+========================================================= */
+
+.department-priority {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 60px;
+
+  padding: 6px 9px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.department-priority-low {
+  background: #edf8f4;
+  color: #20a77d;
+}
+
+.department-priority-medium {
+  background: #fff5df;
+  color: #d99118;
+}
+
+.department-priority-high {
+  background: #ffecef;
+  color: #df5063;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.department-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 90px;
+
+  padding: 6px 9px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.department-status-submitted {
+  background: #fff4df;
+  color: #d99118;
+}
+
+.department-status-review {
+  background: #eeedff;
+  color: #635bff;
+}
+
+.department-status-progress {
+  background: #e6f9fd;
+  color: #089bb8;
+}
+
+.department-status-resolved {
+  background: #e5f8f0;
+  color: #168c69;
+}
+
+.department-status-rejected {
+  background: #ffecef;
+  color: #d84f62;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.department-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #73758c;
+
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.department-date svg {
+  color: #8c8ea1;
+}
+
+
+/* =========================================================
+   VIEW / MANAGE BUTTON
+========================================================= */
+
+.department-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 8px 11px;
+
+  border: 1px solid #dedcff;
+  border-radius: 8px;
+
+  background: #f4f3ff;
+  color: #635bff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.department-view-btn:hover {
+  background: #635bff;
+  border-color: #635bff;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.department-empty-state {
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: #ffffff;
+  border: 1px solid #e8e9f1;
+  border-radius: 14px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 18px rgba(23, 21, 59, 0.04);
+}
+
+.department-empty-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 18px;
+
+  background: #eeedff;
+  color: #635bff;
+}
+
+.department-empty-state h3 {
+  margin: 0 0 7px;
+
+  color: #20213a;
+
+  font-size: 18px;
+}
+
+.department-empty-state p {
+  margin: 0;
+
+  color: #73758c;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.department-complaints-loading {
+  min-height: calc(100vh - 76px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #f6f7fb;
+
+  color: #73758c;
+}
+
+.department-loading-spinner {
+  width: 38px;
+  height: 38px;
+
+  margin-bottom: 14px;
+
+  border: 3px solid #e4e4f4;
+  border-top-color: #635bff;
+
+  border-radius: 50%;
+
+  animation: departmentSpinner 0.8s linear infinite;
+}
+
+.department-complaints-loading p {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@keyframes departmentSpinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.department-complaints-error {
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: #f6f7fb;
+
+  text-align: center;
+}
+
+.department-complaints-error > svg {
+  margin-bottom: 12px;
+  color: #ef5b6b;
+}
+
+.department-complaints-error h3 {
+  margin: 0 0 7px;
+
+  color: #20213a;
+  font-size: 19px;
+}
+
+.department-complaints-error p {
+  margin: 0 0 18px;
+
+  max-width: 500px;
+
+  color: #73758c;
+  font-size: 13px;
+}
+
+.department-complaints-error button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #635bff;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.department-complaints-error button:hover {
+  background: #5149df;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .department-complaints-page {
+    padding: 24px;
+  }
+
+  .department-complaint-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .department-complaints-page {
+    padding: 18px;
+  }
+
+  .department-complaints-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .department-complaints-header h1 {
+    font-size: 25px;
+  }
+
+  .department-refresh-btn {
+    width: 100%;
+  }
+
+  .department-complaint-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .department-filter-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .department-search-box {
+    width: 100%;
+  }
+
+  .department-filter-card select {
+    width: 100%;
+  }
+
+  .department-result-count {
+    margin-top: 5px;
+  }
+
+  .department-table-card {
+    border-radius: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .department-complaints-page {
+    padding: 14px;
+  }
+
+  .department-complaints-header h1 {
+    font-size: 22px;
+  }
+
+  .department-complaints-header > div > p:last-child {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .department-complaint-stat-card {
+    min-height: 82px;
+    padding: 14px;
+  }
+
+  .department-stat-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+}
+

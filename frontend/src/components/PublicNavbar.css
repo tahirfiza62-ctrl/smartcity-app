@@ -1,0 +1,649 @@
+/* =========================================================
+   SMARTCITY PUBLIC NAVBAR
+========================================================= */
+
+.public-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 76px;
+
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(224, 225, 235, 0.8);
+
+  transition:
+    background 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* =========================================================
+   NAVBAR CONTAINER
+========================================================= */
+
+.public-navbar-container {
+  width: min(1200px, calc(100% - 40px));
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.public-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  color: #20213a;
+  text-decoration: none;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.25s ease;
+}
+
+.public-logo:hover {
+  transform: translateY(-1px);
+}
+
+.public-logo-icon {
+  position: relative;
+
+  width: 41px;
+  height: 41px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      145deg,
+      #635bff,
+      #17153b
+    );
+
+  box-shadow:
+    0 8px 20px rgba(23, 21, 59, 0.18);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+.public-logo-icon::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    transparent 45%
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+.public-logo:hover .public-logo-icon {
+  transform: rotate(-3deg) scale(1.05);
+
+  box-shadow:
+    0 11px 27px rgba(99, 91, 255, 0.28);
+}
+
+.public-logo:hover .public-logo-icon::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   LOGO TEXT
+========================================================= */
+
+.public-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.public-logo-text strong {
+  color: #20213a;
+
+  font-size: 18px;
+  line-height: 1;
+
+  letter-spacing: -0.5px;
+  font-weight: 750;
+}
+
+.public-logo-text span {
+  margin-top: 5px;
+
+  color: #85879b;
+
+  font-size: 8px;
+  line-height: 1;
+
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+
+  transition: color 0.25s ease;
+}
+
+.public-logo:hover .public-logo-text span {
+  color: #635bff;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.public-nav-links {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+}
+
+.public-nav-link {
+  position: relative;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  color: #66687d;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 650;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.public-nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 18px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #635bff,
+    #817aff
+  );
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.public-nav-link::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 17px;
+
+  width: 0;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: rgba(99, 91, 255, 0.16);
+
+  filter: blur(5px);
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.4s ease;
+}
+
+.public-nav-link:hover {
+  color: #635bff;
+
+  transform: translateY(-1px);
+}
+
+.public-nav-link:hover::after,
+.public-nav-link.active::after {
+  width: 23px;
+}
+
+.public-nav-link:hover::before,
+.public-nav-link.active::before {
+  width: 28px;
+}
+
+.public-nav-link.active {
+  color: #635bff;
+}
+
+
+/* =========================================================
+   RIGHT ACTIONS
+========================================================= */
+
+.public-nav-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.public-login {
+  position: relative;
+
+  color: #34354d;
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.public-login::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 1px;
+
+  background: #635bff;
+
+  transition:
+    width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.public-login:hover {
+  color: #635bff;
+  transform: translateY(-1px);
+}
+
+.public-login:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   REGISTER BUTTON
+========================================================= */
+
+.public-register {
+  position: relative;
+
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 17px;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  background: linear-gradient(
+    135deg,
+    #635bff,
+    #554ce9
+  );
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 750;
+
+  box-shadow:
+    0 8px 20px rgba(99, 91, 255, 0.2);
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+.public-register::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.6s ease;
+}
+
+.public-register:hover {
+  transform: translateY(-3px);
+
+  background: linear-gradient(
+    135deg,
+    #756eff,
+    #635bff
+  );
+
+  box-shadow:
+    0 13px 28px rgba(99, 91, 255, 0.3);
+}
+
+.public-register:hover::before {
+  left: 140%;
+}
+
+.public-register svg {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.public-register:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.public-menu-button {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e5e5ed;
+  border-radius: 9px;
+
+  background: white;
+
+  color: #20213a;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.public-menu-button:hover {
+  border-color: rgba(99, 91, 255, 0.25);
+
+  background: rgba(99, 91, 255, 0.06);
+
+  color: #635bff;
+
+  transform: translateY(-1px);
+}
+
+.public-menu-button:active {
+  transform: scale(0.94);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-public-menu {
+  display: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .public-nav-links {
+    gap: 22px;
+  }
+
+  .public-nav-actions {
+    gap: 12px;
+  }
+
+  .public-logo-text strong {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .public-navbar {
+    height: 70px;
+  }
+
+  .public-navbar-container {
+    width: calc(100% - 30px);
+  }
+
+  .public-nav-links,
+  .public-nav-actions {
+    display: none;
+  }
+
+  .public-menu-button {
+    display: flex;
+  }
+
+  .public-logo-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .public-logo-text strong {
+    font-size: 16px;
+  }
+
+  .public-logo-text span {
+    font-size: 7px;
+  }
+
+  /* MOBILE DROPDOWN */
+
+  .mobile-public-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+
+    padding: 9px 15px 16px;
+
+    border-bottom: 1px solid #e6e6ee;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    box-shadow:
+      0 15px 35px rgba(23, 21, 59, 0.08);
+
+    animation: mobileMenuDown 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .mobile-public-menu a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 13px 10px;
+
+    border-radius: 8px;
+    border-bottom: 1px solid #f0f0f5;
+
+    color: #34354d;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    transition:
+      color 0.3s ease,
+      background 0.3s ease,
+      padding-left 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .mobile-public-menu a:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-public-menu a:hover {
+    padding-left: 16px;
+
+    color: #635bff;
+
+    background: rgba(99, 91, 255, 0.06);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .public-navbar-container {
+    width: calc(100% - 22px);
+  }
+
+  .public-logo {
+    gap: 8px;
+  }
+
+  .public-logo-icon {
+    width: 37px;
+    height: 37px;
+    border-radius: 9px;
+  }
+
+  .public-logo-text strong {
+    font-size: 15px;
+  }
+
+  .public-logo-text span {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .public-menu-button {
+    width: 37px;
+    height: 37px;
+  }
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes mobileMenuDown {
+
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .public-navbar *,
+  .public-navbar *::before,
+  .public-navbar *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

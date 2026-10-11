@@ -1,0 +1,979 @@
+/* =========================================================
+   DEPARTMENT EMERGENCY MANAGEMENT
+========================================================= */
+
+.emergency-page {
+  width: 100%;
+  min-height: calc(100vh - 76px);
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 20px;
+  background: #f6f7fb;
+  color: #20213a;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.emergency-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.emergency-eyebrow {
+  margin-bottom: 7px;
+  color: #635bff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.emergency-page-header h1 {
+  margin: 0;
+  color: #17153b;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.emergency-page-header p {
+  margin: 8px 0 0;
+  color: #73758c;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   AUTOMATIC EMERGENCY INFO
+========================================================= */
+
+.department-emergency-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 390px;
+  padding: 13px 16px;
+  border: 1px solid #e3e4f0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #55576f;
+  font-size: 13px;
+  line-height: 1.5;
+  box-shadow: 0 5px 18px rgba(23, 21, 59, 0.04);
+}
+
+.department-emergency-info svg {
+  flex-shrink: 0;
+  color: #635bff;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.emergency-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.emergency-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 92px;
+  padding: 18px;
+  border: 1px solid #e9e9f1;
+  border-radius: 15px;
+  background: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0 5px 20px rgba(23, 21, 59, 0.04);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.emergency-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 24px rgba(23, 21, 59, 0.07);
+}
+
+.emergency-stat-icon {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #eeecff;
+  color: #635bff;
+}
+
+.active-icon {
+  background: #e8f8f5;
+  color: #20b486;
+}
+
+.critical-icon {
+  background: #fff0f2;
+  color: #ef5b6b;
+}
+
+.resolved-icon {
+  background: #e9f8f1;
+  color: #20b486;
+}
+
+.emergency-stat-card span {
+  display: block;
+  margin-bottom: 5px;
+  color: #73758c;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.emergency-stat-card strong {
+  display: block;
+  color: #17153b;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.emergency-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 15px;
+  border: 1px solid #e9e9f1;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(23, 21, 59, 0.035);
+}
+
+.emergency-search {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.emergency-search svg {
+  position: absolute;
+  left: 14px;
+  color: #9092a5;
+  pointer-events: none;
+}
+
+.emergency-search input {
+  width: 100%;
+  height: 43px;
+  padding: 0 14px 0 42px;
+  border: 1px solid #e1e2eb;
+  border-radius: 10px;
+  outline: none;
+  background: #fafafe;
+  color: #20213a;
+  font-size: 13px;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.emergency-search input::placeholder {
+  color: #999bad;
+}
+
+.emergency-search input:focus {
+  border-color: #635bff;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.09);
+}
+
+.emergency-toolbar select {
+  height: 43px;
+  min-width: 145px;
+  padding: 0 12px;
+  border: 1px solid #e1e2eb;
+  border-radius: 10px;
+  outline: none;
+  background: #fafafe;
+  color: #45475f;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.emergency-toolbar select:focus {
+  border-color: #635bff;
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.09);
+}
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.emergency-table-card {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #e9e9f1;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 7px 25px rgba(23, 21, 59, 0.045);
+}
+
+.emergency-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 22px;
+  border-bottom: 1px solid #eeeeF4;
+}
+
+.emergency-table-header h2 {
+  margin: 0;
+  color: #17153b;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.emergency-table-header p {
+  margin: 5px 0 0;
+  color: #85879a;
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.emergency-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.emergency-table {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+}
+
+.emergency-table th {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eeeeF4;
+  background: #fafafe;
+  color: #77798e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.emergency-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f5;
+  color: #45475f;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.emergency-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.emergency-table tbody tr:hover {
+  background: #fafaff;
+}
+
+.emergency-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+   EMERGENCY ID + TITLE
+========================================================= */
+
+.emergency-id {
+  margin-bottom: 5px;
+  color: #635bff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.emergency-title {
+  max-width: 190px;
+  color: #20213a;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   CITIZEN
+========================================================= */
+
+.citizen-info {
+  min-width: 160px;
+}
+
+.citizen-name,
+.citizen-email {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.citizen-name {
+  margin-bottom: 5px;
+  color: #303149;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.citizen-name svg {
+  color: #635bff;
+}
+
+.citizen-email {
+  color: #85879a;
+  font-size: 11px;
+}
+
+.citizen-email svg {
+  color: #9799aa;
+}
+
+/* =========================================================
+   TYPE
+========================================================= */
+
+.emergency-type {
+  display: inline-block;
+  max-width: 155px;
+  padding: 6px 9px;
+  border-radius: 7px;
+  background: #f1f0ff;
+  color: #635bff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.emergency-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  max-width: 170px;
+  color: #55576f;
+  line-height: 1.4;
+}
+
+.emergency-location svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #635bff;
+}
+
+/* =========================================================
+   SEVERITY
+========================================================= */
+
+.severity-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 68px;
+  padding: 6px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.severity-badge.low {
+  background: #eaf8f2;
+  color: #20a77b;
+}
+
+.severity-badge.medium {
+  background: #fff7e8;
+  color: #d68a00;
+}
+
+.severity-badge.high {
+  background: #fff0e9;
+  color: #e26738;
+}
+
+.severity-badge.critical {
+  background: #ffebef;
+  color: #df4356;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.emergency-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.emergency-status.reported {
+  background: #eeecff;
+  color: #635bff;
+}
+
+.emergency-status.assigned {
+  background: #e8f6ff;
+  color: #1687c5;
+}
+
+.emergency-status.in-progress {
+  background: #fff6df;
+  color: #c78300;
+}
+
+.emergency-status.resolved {
+  background: #e8f8f0;
+  color: #20a77b;
+}
+
+.emergency-status.cancelled {
+  background: #f0f0f4;
+  color: #77798c;
+}
+
+/* =========================================================
+   RESPONSE TEAM
+========================================================= */
+
+.response-team {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 150px;
+  color: #55576f;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.response-team svg {
+  flex-shrink: 0;
+  color: #635bff;
+}
+
+/* =========================================================
+   REPORTED DATE
+========================================================= */
+
+.reported-date {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  color: #55576f;
+}
+
+.reported-date svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #85879a;
+}
+
+.reported-date span {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.reported-date small {
+  display: block;
+  margin-top: 3px;
+  color: #999bad;
+  font-size: 10px;
+}
+
+/* =========================================================
+   ACTION BUTTON
+========================================================= */
+
+.edit-btn {
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #deddf5;
+  border-radius: 9px;
+  background: #f4f3ff;
+  color: #635bff;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.edit-btn:hover {
+  background: #e9e7ff;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.emergency-empty {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+  text-align: center;
+}
+
+.emergency-empty > svg {
+  margin-bottom: 12px;
+  color: #aaaabd;
+}
+
+.emergency-empty h3 {
+  margin: 0 0 6px;
+  color: #303149;
+  font-size: 16px;
+}
+
+.emergency-empty p {
+  margin: 0;
+  color: #85879a;
+  font-size: 13px;
+}
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+.emergency-loader {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 14px;
+  border: 3px solid #e8e8f1;
+  border-top-color: #635bff;
+  border-radius: 50%;
+  animation: emergencySpin 0.8s linear infinite;
+}
+
+@keyframes emergencySpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.emergency-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: rgba(23, 21, 59, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.emergency-modal {
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 25px 70px rgba(23, 21, 59, 0.2);
+}
+
+.emergency-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 21px 24px;
+  border-bottom: 1px solid #eeeeF4;
+}
+
+.modal-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.modal-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #eeecff;
+  color: #635bff;
+}
+
+.emergency-modal-header h2 {
+  margin: 0;
+  color: #20213a;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.emergency-modal-header p {
+  margin: 4px 0 0;
+  color: #85879a;
+  font-size: 12px;
+}
+
+.modal-close {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 9px;
+  background: #f4f4f8;
+  color: #696b80;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: #ededf3;
+}
+
+/* =========================================================
+   CITIZEN DETAILS
+========================================================= */
+
+.emergency-citizen-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 20px 24px 0;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid #ededf3;
+  border-radius: 10px;
+  background: #fafafe;
+}
+
+.detail-item > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #635bff;
+}
+
+.detail-item span {
+  display: block;
+  margin-bottom: 4px;
+  color: #85879a;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.detail-item strong {
+  display: block;
+  color: #303149;
+  font-size: 12px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.emergency-description-box {
+  margin: 18px 24px 0;
+  padding: 15px;
+  border-radius: 11px;
+  background: #f7f7fb;
+}
+
+.emergency-description-box > span {
+  display: block;
+  margin-bottom: 7px;
+  color: #73758c;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.emergency-description-box p {
+  margin: 0;
+  color: #44465e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.emergency-form {
+  padding: 20px 24px 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  color: #45475f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #dedfe9;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #303149;
+  font-family: inherit;
+  font-size: 13px;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+  height: 43px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #635bff;
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.09);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a0a1b0;
+}
+
+/* =========================================================
+   FORM FOOTER
+========================================================= */
+
+.emergency-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #eeeeF4;
+}
+
+.cancel-btn,
+.save-emergency-btn {
+  min-width: 125px;
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  border: 1px solid #dedfe9;
+  background: #ffffff;
+  color: #5e6074;
+}
+
+.cancel-btn:hover {
+  background: #f7f7fa;
+}
+
+.save-emergency-btn {
+  border: none;
+  background: #635bff;
+  color: #ffffff;
+  box-shadow: 0 5px 14px rgba(99, 91, 255, 0.2);
+}
+
+.save-emergency-btn:hover {
+  background: #554de8;
+}
+
+.save-emergency-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .emergency-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .emergency-page {
+    padding: 22px;
+  }
+
+  .emergency-page-header {
+    flex-direction: column;
+  }
+
+  .department-emergency-info {
+    max-width: none;
+  }
+
+  .emergency-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .emergency-search {
+    flex: 1 1 100%;
+  }
+
+  .emergency-toolbar select {
+    flex: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .emergency-page {
+    padding: 16px;
+  }
+
+  .emergency-page-header h1 {
+    font-size: 24px;
+  }
+
+  .emergency-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-toolbar {
+    padding: 12px;
+  }
+
+  .emergency-toolbar select {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .emergency-table-header {
+    padding: 17px;
+  }
+
+  .emergency-modal-overlay {
+    padding: 12px;
+  }
+
+  .emergency-modal {
+    max-height: 94vh;
+    border-radius: 14px;
+  }
+
+  .emergency-modal-header {
+    padding: 17px;
+  }
+
+  .emergency-citizen-details {
+    grid-template-columns: 1fr;
+    padding: 16px 17px 0;
+  }
+
+  .emergency-description-box {
+    margin: 15px 17px 0;
+  }
+
+  .emergency-form {
+    padding: 17px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .emergency-form-footer {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-btn,
+  .save-emergency-btn {
+    width: 100%;
+  }
+}

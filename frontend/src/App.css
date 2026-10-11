@@ -1,0 +1,130 @@
+/* =========================================
+   SMART CITY GLOBAL THEME
+========================================= */
+
+:root {
+  --primary: #635bff;
+  --primary-dark: #5148e5;
+  --secondary: #8b5cf6;
+  --accent: #06b6d4;
+
+  --sidebar: #17153b;
+  --sidebar-light: #25214f;
+
+  --background: #f6f7fb;
+  --card: #ffffff;
+
+  --text: #20213a;
+  --muted: #73758c;
+
+  --border: #e8e8f0;
+
+  --success: #20b486;
+  --warning: #f5a623;
+  --danger: #ef5b6b;
+
+  --shadow:
+    0 10px 30px rgba(31, 35, 55, 0.07);
+
+  --radius: 14px;
+}
+
+
+/* =========================================
+   APP LAYOUT
+========================================= */
+
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  margin-left: 260px;
+}
+
+.content {
+  padding: 28px;
+  min-height: calc(100vh - 72px);
+}
+
+
+/* =========================================
+   COMMON CONTAINER
+========================================= */
+
+.dashboard-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 11px 18px;
+
+  background: var(--primary);
+  color: white;
+
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(99, 91, 255, 0.25);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .main {
+    margin-left: 0;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 16px;
+  }
+}
